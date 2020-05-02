@@ -1,0 +1,14 @@
+<div style="padding: 13px;" class ="example-container">
+    <div class="jumbotron jumbotron-fluid container pt-5 h1 display-1">
+        <h1>Precaution</h1>
+    </div>
+    <mat-card *ngFor="let item of precaution" style="margin-top:10px;">
+        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+            <mat-card-content>
+                <p class="text-muted">
+                    {{item.message}}
+                </p>
+            </mat-card-content>
+        </div>
+    </mat-card>
+</div>

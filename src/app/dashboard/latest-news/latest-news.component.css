@@ -1,0 +1,13 @@
+.example-card {
+    max-width: 400px;
+    
+  }
+
+  .img-max-height{
+      max-height: 400px;
+  }
+
+  .example-container {
+    max-height: 600px;
+    overflow: auto;
+  }

@@ -1,0 +1,20 @@
+.pointer{
+    cursor:pointer;
+}
+
+.margin-l-180-px {
+    margin-left: 180px;
+}
+
+td.mat-cell{
+    border-bottom-style: none;
+}
+
+th.mat-header-cell{
+    border-bottom-style: none;
+}
+
+.example-container {
+    max-height: 500px;
+    overflow: auto;
+  }

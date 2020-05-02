@@ -1,0 +1,41 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Add News</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="newsForm" (ngSubmit)="save(newsForm.value)">
+        <div class="form-div">
+            <mat-form-field  class="field-container">
+                
+            <input matInput placeholder="Title" formControlName="title" required>
+            <mat-error *ngIf="newsForm.get('title').invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field  class="field-container">
+            <input matInput placeholder="Description" formControlName="description" required>
+            <mat-error *ngIf="newsForm.get('description').invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field  class="field-container">
+            <input matInput placeholder="Summary" formControlName="summary" required>
+            <mat-error *ngIf="newsForm.get('summary').invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field  class="field-container">
+            <input matInput placeholder="Full News URL" formControlName="fullnews" required>
+            <mat-error *ngIf="newsForm.get('fullnews').invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field  class="field-container">
+            <input matInput placeholder="Image URL" formControlName="imageURL" required>
+            <mat-error *ngIf="newsForm.get('imageURL').invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-card-actions>
+                    <button type="submit" mat-raised-button color="accent" [disabled]="!newsForm.valid">Add News</button>
+                    <button type="button" mat-raised-button color="accent" (click)="resetForm()" [disabled]="!newsForm.valid">Reset</button>
+            </mat-card-actions>
+        </div>
+    </form>
+    </mat-card-content>
+</mat-card>

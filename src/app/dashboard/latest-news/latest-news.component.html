@@ -1,0 +1,19 @@
+<div class ="example-container">
+<mat-card class="example-card" *ngFor = 'let eachNews of latesNews'>
+    <mat-card-header>      
+      <mat-card-title>{{eachNews.title}}</mat-card-title>
+      <mat-card-subtitle>{{eachNews.description}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image class="img-max-height" src="{{eachNews.imageURL}}" alt="{{eachNews.title}}">
+    <mat-card-content>
+      <p>
+       {{eachNews.summary}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a href="{{eachNews.fullnews}}" target="_blank">Read More</a>      
+    </mat-card-actions>
+  </mat-card>
+
+</div>
+ 

@@ -1,0 +1,16 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding:25px;
+    height: 25px;
+    color: #f6f6f7;;
+    background-color: #062639;
+    font-size: 16px;
+    justify-content: center;
+  }
+
+p {
+    margin-top: 20px;
+}

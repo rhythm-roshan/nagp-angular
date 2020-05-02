@@ -1,0 +1,9 @@
+.jumbotron{
+    text-align: center;
+    font-family:  sans-serif;
+}
+
+.example-container {
+    max-height: 600px;
+    overflow: auto;
+  }
