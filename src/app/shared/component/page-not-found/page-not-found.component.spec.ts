@@ -24,4 +24,22 @@ describe('PageNotFoundComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should call goBack()', async(() => {
+    spyOn(component, 'goBack');
+  
+    let button = fixture.debugElement.nativeElement.querySelector('button');
+    button.click();
+  
+    fixture.whenStable().then(() => {
+      expect(component.goBack).toHaveBeenCalled();
+    });
+  }));
+
+  it('should contain Go back in the go back button', () => {
+    const text = "Go to Home page";
+    const component = fixture.debugElement.componentInstance;
+    expect(component.goHomePage).toContain(text);
+  });
+
 });

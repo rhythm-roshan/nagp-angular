@@ -13,7 +13,9 @@ export class PageNotFoundComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goHomePage: string = "Go to Home page";
+
   goBack(): void {
-      this.route.navigate(['/dashboard/state'])  ; 
+    this.route.navigate(['/dashboard/state']);
   }
 }

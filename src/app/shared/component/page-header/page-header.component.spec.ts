@@ -22,4 +22,16 @@ describe('PageHeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should contain Covid-19 Tracker in the header toolbar', () => {
+    const text = "Covid-19 Tracker";
+    const component = fixture.debugElement.componentInstance;
+    expect(component.pageTitle).toContain(text);
+  });
+
+  it('should not contain abc in the header toolbar', () => {
+    const text = "abc";
+    const component = fixture.debugElement.componentInstance;
+    expect(component.pageTitle).not.toContain(text);
+  });
 });

@@ -28,4 +28,16 @@ describe('AddLatestNewsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('form invalid when empty', () => {
+    expect(component.newsForm.valid).toBeFalsy();
+});
+
+it('title field validity', () => {
+    let name = component.newsForm.controls['title'];
+    expect(name.valid).toBeFalsy();
+
+    name.setValue("");
+    expect(name.hasError('required')).toBeTruthy();
+});
 });

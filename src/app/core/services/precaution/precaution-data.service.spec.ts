@@ -22,6 +22,10 @@ describe('PrecautionDataService', () => {
     httpMock = TestBed.get(HttpTestingController);
   });
 
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+
   it(`should fetch 1 precaution as an Observable`, async(inject([HttpTestingController, PrecautionDataService],
     (httpClient: HttpTestingController, service: PrecautionDataService) => {
 

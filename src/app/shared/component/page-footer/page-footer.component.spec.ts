@@ -22,4 +22,16 @@ describe('PageFooterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should contain rhythm raj in the footer toolbar', () => {
+    const footerText = "Rhythm Raj";
+    const component = fixture.debugElement.componentInstance;
+    expect(component.name).toContain(footerText);
+  });
+
+  it('should not contain abc in the footer toolbar', () => {
+    const footerText = "abc";
+    const component = fixture.debugElement.componentInstance;
+    expect(component.name).not.toContain(footerText);
+  });
 });
