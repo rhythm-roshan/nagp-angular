@@ -16,14 +16,17 @@ export class StateWiseComponent implements OnInit {
   dataSource = new MatTableDataSource(this.stateData);
   resultsLength  = 0;
   ngOnInit(): void {
+         this.getState();
+  } 
 
+  getState(){
     this.dataService.getStateData().subscribe((data) => {
       console.log(data);
       this.stateData = data;
       this.dataSource.data = data;
       this.resultsLength = data.length;
-    });    
-  } 
+    }); 
+  }
 
 
   navigate(state) {

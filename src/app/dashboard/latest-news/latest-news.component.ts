@@ -10,12 +10,16 @@ import { ILatestNews } from 'src/app/infrastructure/interfaces/ilatest-news';
 export class LatestNewsComponent implements OnInit {
 
   constructor(private dataservice: LatestNewsService) { }
-  latesNews: ILatestNews[];
+  latestNews: ILatestNews[];
 
   ngOnInit(): void {
+   this.getNews();
+  }
+
+  getNews(){
     this.dataservice.getLatestNews().subscribe((data) => {
       console.log(data);
-      this.latesNews = data;
+      this.latestNews = data;
     });
   }
 

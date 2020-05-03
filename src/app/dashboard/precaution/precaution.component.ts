@@ -10,12 +10,15 @@ import { IPrecautionMeasures } from 'src/app/infrastructure/interfaces/iprecauti
 export class PrecautionComponent implements OnInit {
 
   constructor(private dataService: PrecautionDataService) { }
-  precaution : IPrecautionMeasures[];
-  ngOnInit(): void { 
+  precaution: IPrecautionMeasures[];
+  ngOnInit(): void {
+    this.getPrecaution();
+  }
 
-  this.dataService.getPrecautions().subscribe((data)=>{
-    console.log(data);
-    this.precaution = data;
-  })  
+  getPrecaution() {
+    this.dataService.getPrecautions().subscribe((data) => {
+      console.log(data);
+      this.precaution = data;
+    })
   }
 }
